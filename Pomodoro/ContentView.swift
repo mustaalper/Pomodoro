@@ -39,7 +39,7 @@ struct ContentView: View {
             LinearGradient(colors: [.blue, .purple], startPoint: .center, endPoint: .bottom)
                 .ignoresSafeArea()
             VStack(spacing: 10) {
-                Text("25 + 5 Clock")
+                Text("Pomodoro")
                     .foregroundColor(.white)
                     .font(.system(size: 50))
                 Stepper("\(appState.workMinutes) minutes session", value: $appState.workMinutes, in: 1...99)
@@ -52,6 +52,7 @@ struct ContentView: View {
                     .disabled(timer != nil)
                     .padding()
                     .background(.white)
+                    .foregroundColor(.black)
                     .font(.title)
                 GeometryReader { geo in
                     VStack(spacing: 10) {
